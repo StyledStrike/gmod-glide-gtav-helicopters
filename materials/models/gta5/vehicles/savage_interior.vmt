@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/savage_interior"
+	$allowdiffusemodulation "false"
+}

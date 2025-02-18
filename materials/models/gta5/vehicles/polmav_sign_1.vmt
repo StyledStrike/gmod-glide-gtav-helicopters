@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/polmav_sign_1"
+	$allowdiffusemodulation "false"
+}

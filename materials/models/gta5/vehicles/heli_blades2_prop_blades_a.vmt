@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/heli_blades2_prop_blades_a"
+	$nodecal "1"
+	$translucent "1"
+}

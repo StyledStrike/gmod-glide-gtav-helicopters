@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/velum_interior_seat_hd"
+	$allowdiffusemodulation "false"
+}

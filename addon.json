@@ -1,0 +1,14 @@
+{
+	"title": "Glide // GTAV: Helicopters",
+	"type": "entity",
+	"tags":	["fun", "roleplay"],
+	"ignore": [
+		".git*",
+		"*.txt",
+		"*.md",
+        "*.yml",
+        ".editorconfig",
+		"glualint.json",
+		"LICENSE"
+	]
+}

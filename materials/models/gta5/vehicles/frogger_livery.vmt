@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/frogger_livery"
+	$nodecal "1"
+	$translucent "1"
+	$allowdiffusemodulation "false"
+}

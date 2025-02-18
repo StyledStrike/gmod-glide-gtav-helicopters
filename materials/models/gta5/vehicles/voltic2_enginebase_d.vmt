@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/voltic2_enginebase_d"
+	$allowdiffusemodulation "false"
+}

@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/avenger_prop_davenger_blades_a"
+	$nodecal 1
+	$translucent 1
+}

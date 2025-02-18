@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/swift_sign_2"
+	$allowdiffusemodulation "false"
+}

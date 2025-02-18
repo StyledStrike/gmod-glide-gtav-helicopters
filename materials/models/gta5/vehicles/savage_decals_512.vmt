@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/savage_decals_512"
+	$nodecal "1"
+	$translucent "1"
+	$allowdiffusemodulation "false"
+}

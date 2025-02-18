@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/avenger_rivet_d"
+	$nodecal "1"
+	$translucent "1"
+	$allowdiffusemodulation "false"
+}

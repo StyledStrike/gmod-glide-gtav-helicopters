@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	$basetexture "models/gta5/vehicles/army_camouflage_512"
+	$basetexturetransform "center .5 .5 scale 3 3 rotate 0 translate 0 0"
+	$allowdiffusemodulation "false"
+}

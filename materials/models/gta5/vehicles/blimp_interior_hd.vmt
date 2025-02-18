@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/blimp_interior_hd"
+	$allowdiffusemodulation "false"
+}

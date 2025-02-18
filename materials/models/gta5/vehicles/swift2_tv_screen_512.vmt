@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/swift2_tv_screen_512"
+	$allowdiffusemodulation "false"
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/heli_interior2"
+	$allowdiffusemodulation "false"
+}

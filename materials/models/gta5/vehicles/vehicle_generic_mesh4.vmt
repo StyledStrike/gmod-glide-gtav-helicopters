@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/vehicle_generic_mesh4"
+	$allowdiffusemodulation "false"
+}

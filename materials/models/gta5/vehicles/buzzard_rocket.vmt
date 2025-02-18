@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/buzzard_rocket"
+	$allowdiffusemodulation "false"
+}

@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/cargobob_livery_d"
+	$translucent "1"
+	$allowdiffusemodulation "false"
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/napalm_interior"
+	$allowdiffusemodulation "false"
+}

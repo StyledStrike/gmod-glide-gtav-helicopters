@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	$baseTexture "models/gta5/vehicles/hunt_interior_ng"
+	$allowdiffusemodulation "false"
+}
