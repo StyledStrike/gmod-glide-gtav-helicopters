@@ -136,6 +136,7 @@ if SERVER then
             if
                 target ~= source and
                 IsValid( phys ) and
+                phys:IsMotionEnabled() and
                 not IsValid( target:GetParent() ) and
                 CanPickup( target, grabber ) and
                 ( CLASS_WHITELIST[target:GetClass()] or target.IsGlideVehicle or target.IsSimfphyscar )
