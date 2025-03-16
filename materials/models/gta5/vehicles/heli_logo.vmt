@@ -1,5 +1,6 @@
 "VertexlitGeneric"
 {
-	$baseTexture "models/gta5/vehicles/velum_interior_seat_hd"
+	$baseTexture "models/gta5/vehicles/heli_logo"
 	$allowdiffusemodulation "false"
+	$translucent "1"
 }
