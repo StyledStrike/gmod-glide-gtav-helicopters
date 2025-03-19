@@ -95,15 +95,28 @@ if SERVER then
 
     DEFINE_BASECLASS( "base_glide_heli" )
 
-    function ENT:Repair()
-        BaseClass.Repair( self )
-
-        -- All rotors on this vehicle spin on the Up axis, and have Angle(0,0,0) as the base angle.
-        for i, rotor in ipairs( self.rotors ) do
-            if IsValid( rotor ) then
-                rotor:SetSpinAxis( "Up" )
-                rotor.maxSpinSpeed = i > 1 and -2000 or 2000
-            end
+    -- Override this base class function
+    function ENT:CreateRotors()
+        if not IsValid( self.mainRotor ) then
+            self.mainRotor = self:CreateRotor( self.MainRotorOffset, self.MainRotorRadius, self.MainRotorModel, self.MainRotorFastModel )
+            self.mainRotor:SetSpinAxis( "Up" )
+            self.mainRotor.maxSpinSpeed = 2000
         end
+
+        if not IsValid( self.tailRotor ) then
+            self.tailRotor = self:CreateRotor( self.TailRotorOffset, self.TailRotorRadius, self.TailRotorModel, self.TailRotorFastModel )
+            self.tailRotor:SetSpinAxis( "Up" )
+            self.tailRotor.maxSpinSpeed = -2000
+        end
+    end
+
+    -- Override this base class function
+    function ENT:ShouldAllowRotorSpin( selfTbl )
+        return IsValid( selfTbl.mainRotor ) or IsValid( selfTbl.tailRotor )
+    end
+
+    -- Override this base class function
+    function ENT:ShouldGoOutOfControl( selfTbl )
+        return not ( IsValid( selfTbl.mainRotor ) and IsValid( selfTbl.tailRotor ) )
     end
 end
