@@ -12,6 +12,8 @@ ENT.MaxChassisHealth = 900
 ENT.MainRotorOffset = Vector( 0, 0, 32 )
 ENT.TailRotorOffset = Vector( -146.5, 5.5, 1 )
 
+ENT.CanSwitchHeadlights = true
+
 if CLIENT then
     ENT.CameraOffset = Vector( -400, 0, 60 )
 
@@ -21,6 +23,15 @@ if CLIENT then
 
     ENT.EngineFireOffsets = {
         { offset = Vector( -30, 0, -20 ), angle = Angle( 300, 0, 0 ), scale = 0.5 }
+    }
+
+    ENT.Headlights = {
+        { offset = Vector( 58, 0, -41 ) }
+    }
+
+    ENT.LightSprites = {
+        { type = "headlight", offset = Vector( 57.8, 6.7, -41 ), dir = Vector( 1, 0, 0 ) },
+        { type = "headlight", offset = Vector( 57.8, -6.7, -41 ), dir = Vector( 1, 0, 0 ) }
     }
 
     ENT.DistantSoundPath = "glide/helicopters/distant_loop_1.wav"
