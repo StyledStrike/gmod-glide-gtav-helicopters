@@ -11,6 +11,8 @@ ENT.PrintName = "Buzzard (Weaponized)"
 ENT.MainRotorOffset = Vector( 0, 0, 92 )
 ENT.TailRotorOffset = Vector( -232, 5, 65 )
 
+ENT.CanSwitchHeadlights = true
+
 if CLIENT then
     ENT.CameraOffset = Vector( -550, 0, 150 )
 
@@ -30,6 +32,14 @@ if CLIENT then
     ENT.StrobeLightColors = {
         Color( 255, 255, 255 ),
         Color( 255, 255, 255 )
+    }
+
+    ENT.Headlights = {
+        { offset = Vector( 83, 0, 29 ), texture = "glide/effects/headlight_circle" }
+    }
+
+    ENT.LightSprites = {
+        { type = "headlight", offset = Vector( 82, 0, 29 ), dir = Vector( 1, 0, 0 ) }
     }
 
     ENT.StartSoundPath = "glide/helicopters/start_2.wav"
