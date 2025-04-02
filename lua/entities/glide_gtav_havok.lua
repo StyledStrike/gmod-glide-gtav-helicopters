@@ -26,7 +26,7 @@ if CLIENT then
     }
 
     ENT.Headlights = {
-        { offset = Vector( 58, 0, -41 ) }
+        { offset = Vector( 58, 0, -41 ), fovScale = 1.2 }
     }
 
     ENT.LightSprites = {
