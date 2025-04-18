@@ -105,17 +105,33 @@ if CLIENT then
 
     --- Override the base class `OnUpdateParticles` function.
     function ENT:OnUpdateParticles()
+        local power = self:GetPower()
+        local eff
+
+        if power > 0.9 then
+            eff = EffectData()
+            eff:SetEntity( self )
+            eff:SetAngles( self:GetUp():Angle() )
+            eff:SetScale( 0.15 )
+            eff:SetRadius( 0.5 ) -- This is actually a offset for the flare effect
+            eff:SetMagnitude( 1 - Clamp( ( 1.2 - power ) / 0.3, 0, 1 ) )
+
+            for _, pos in ipairs( self.ExhaustPositions ) do
+                eff:SetOrigin( self:LocalToWorld( pos ) )
+                Effect( "glide_afterburner_flame", eff, true )
+            end
+        end
+
         local health = self:GetEngineHealth()
         if health > 0.5 then return end
 
         local velocity = self:GetVelocity()
         local normal = -self:GetUp()
-        local power = self:GetPower()
 
         health = Clamp( health * 255, 0, 255 )
 
         for _, pos in ipairs( self.ExhaustPositions ) do
-            local eff = EffectData()
+            eff = EffectData()
             eff:SetOrigin( self:LocalToWorld( pos ) )
             eff:SetNormal( normal )
             eff:SetColor( health )
