@@ -55,6 +55,10 @@ if CLIENT then
         return false
     end
 
+    function ENT:AllowWindSound()
+        return true, 0.5
+    end
+
     function ENT:OnTurnOff()
         self:EmitSound( "gtav/thruster/stop.wav", 75, 100, 0.5 )
     end
