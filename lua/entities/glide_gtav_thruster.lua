@@ -25,7 +25,7 @@ end
 if CLIENT then
     ENT.CameraOffset = Vector( -180, 0, 50 )
 
-    ENT.StartSoundPath = "gtav/thruster/start.wav"
+    ENT.StartSound = "gtav/thruster/start.wav"
 
     ENT.ExhaustPositions = {
         Vector( 0, 19, 5 ),

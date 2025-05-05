@@ -25,7 +25,7 @@ if CLIENT then
         { offset = Vector( -130, 50, 120 ), angle = Angle( 300, 270, 0 ), scale = 1.5 }
     }
 
-    ENT.StartSoundPath = "glide/helicopters/start_2.wav"
+    ENT.StartSound = "glide/helicopters/start_2.wav"
     ENT.TailSoundPath = "glide/helicopters/prop_1.wav"
     ENT.TailSoundLevel = 70
 

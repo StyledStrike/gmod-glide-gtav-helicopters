@@ -29,7 +29,7 @@ if CLIENT then
         { offset = Vector( 24, -20, -16 ), blinkTime = 0.6 }
     }
 
-    ENT.StartSoundPath = "glide/helicopters/start_2.wav"
+    ENT.StartSound = "glide/helicopters/start_2.wav"
     ENT.DistantSoundPath = "glide/helicopters/distant_loop_1.wav"
     ENT.TailSoundPath = "glide/helicopters/tail_rotor_2.wav"
 

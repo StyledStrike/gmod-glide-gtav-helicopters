@@ -26,7 +26,7 @@ if CLIENT then
         { offset = Vector( -60, -72, -80 ), angle = Angle( 270, 0, 0 ) }
     }
 
-    ENT.StartSoundPath = "gtav/blimp/start.wav"
+    ENT.StartSound = "gtav/blimp/start.wav"
 
     function ENT:OnActivateSounds()
         self:CreateLoopingSound( "high", "gtav/blimp/loop_high.wav", 90 )
