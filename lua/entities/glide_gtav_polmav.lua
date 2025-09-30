@@ -133,7 +133,7 @@ if SERVER then
             keyToggle = driver:KeyDown( 1 ) -- IN_ATTACK
 
             if IsValid( self.lightProj ) then
-                self.lightProj:SetAngles( driver:GlideGetCameraAngles() )
+                self.lightProj:SetAngles( driver:GlideGetAimAngles() )
             end
         end
 
