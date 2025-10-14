@@ -27,6 +27,7 @@ if CLIENT then
     }
 
     ENT.StartSound = "gtav/blimp/start.wav"
+    ENT.RotorBeatInterval = -1
 
     function ENT:OnActivateSounds()
         self:CreateLoopingSound( "high", "gtav/blimp/loop_high.wav", 90 )
