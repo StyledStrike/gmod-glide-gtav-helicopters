@@ -1,5 +1,14 @@
 "VertexlitGeneric"
 {
-	$baseTexture "models/gta5/vehicles/avenger_prop_glowavenger_blades_a"
-	$translucent 1
+	$basetexture "models/gta5/vehicles/avenger_prop_glowavenger_blades_a"
+	"$translucent" "1"
+	"$allowdiffusemodulation" "false"
+
+	$emissiveBlendEnabled "1"
+	$emissiveBlendStrength "1"
+	$emissiveBlendTexture "models/gta5/vehicles/avenger_prop_glowavenger_blades_a"
+	$emissiveBlendBaseTexture "models/gta5/vehicles/avenger_prop_glowavenger_blades_a"
+	$emissiveBlendFlowTexture "vgui/white"
+	$emissiveBlendTint "[ 0.5 0.5 0.5 ]"
+	$emissiveBlendScrollVector "[ 0 0 ]"
 }
