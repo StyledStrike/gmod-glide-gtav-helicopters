@@ -13,13 +13,6 @@ ENT.VTOLTransitionTime = 3.5
 
 DEFINE_BASECLASS( "base_glide_plane_vtol" )
 
---- Override this base class function.
-function ENT:SetupDataTables()
-    BaseClass.SetupDataTables( self )
-
-    self:NetworkVar( "Entity", "RotorL" )
-    self:NetworkVar( "Entity", "RotorR" )
-end
 
 if CLIENT then
     ENT.CameraOffset = Vector( -900, 0, 200 )
@@ -67,47 +60,15 @@ if CLIENT then
         self.boneEngineR = self:LookupBone( "engine_r" )
     end
 
-    ENT.ExhaustPositions = {}
-    ENT.EngineFireOffsets = {}
-
-    function ENT:OnUpdateMisc()
-        BaseClass.OnUpdateMisc( self )
-
-        local health = self:GetEngineHealth()
-        if health > 0.5 then return end
-
-        local exhaustPositions = self.ExhaustPositions
-        local fireOffsets = self.EngineFireOffsets
-
-        exhaustPositions[1] = nil
-        exhaustPositions[2] = nil
-        fireOffsets[1] = nil
-        fireOffsets[2] = nil
-
-        local down
-        local count = 0
-        local rl, rr = self:GetRotorL(), self:GetRotorR()
-
-        if IsValid( rl ) then
-            down = -rl:GetUp()
-            count = count + 1
-            exhaustPositions[count] = self:WorldToLocal( rl:GetPos() + down * 220 )
-            fireOffsets[count] = { offset = exhaustPositions[count], angle = down:Angle() }
-        end
-
-        if IsValid( rr ) then
-            down = -rr:GetUp()
-            count = count + 1
-            exhaustPositions[count] = self:WorldToLocal( rr:GetPos() + down * 220 )
-            fireOffsets[count] = { offset = exhaustPositions[count], angle = down:Angle() }
-        end
-    end
+    ENT.ExhaustPositions = { Vector(), Vector() }
+    ENT.EngineFireOffsets = { { offset = Vector() }, { offset = Vector() } }
 
     local ang = Angle()
 
     function ENT:OnUpdateAnimations()
         if not self.boneEngineL then return end
 
+        -- Update control surfaces
         ang[1] = 0
         ang[2] = 0
         ang[3] = self:GetElevator() * -15
@@ -141,6 +102,30 @@ if CLIENT then
 
         self:ManipulateBoneAngles( self.boneEngineL, ang )
         self:ManipulateBoneAngles( self.boneEngineR, ang )
+
+        -- Update exhaust/engine fire offsets using the position of the "engine" bones
+        local m = self:GetBoneMatrix( self.boneEngineL )
+        if not m then return end
+
+        ang = m:GetAngles()
+
+        local exhaustPositions = self.ExhaustPositions
+        local fireOffsets = self.EngineFireOffsets
+
+        local up = ang:Up()
+        local rt = ang:Right()
+        local fw = ang:Forward()
+
+        exhaustPositions[1] = self:WorldToLocal( m:GetTranslation() + up * 30 + rt * 115 + fw * 30 )
+        fireOffsets[1] = { offset = exhaustPositions[1], angle = ang }
+
+        m = self:GetBoneMatrix( self.boneEngineR )
+        up = ang:Up()
+        rt = ang:Right()
+        fw = ang:Forward()
+
+        exhaustPositions[2] = self:WorldToLocal( m:GetTranslation() + up * 30 + rt * 115 - fw * 30 )
+        fireOffsets[2] = { offset = exhaustPositions[2], angle = ang }
     end
 end
 
@@ -248,7 +233,6 @@ if SERVER then
             self.propR:SetSpinAxis( "Up" )
             self.propR:SetSpinAngle( math.random( 0, 180 ) )
             self.propR.maxSpinSpeed = 2500
-            self:SetRotorR( self.propR )
         end
 
         if not IsValid( self.propL ) then
@@ -256,7 +240,6 @@ if SERVER then
             self.propL:SetSpinAxis( "Up" )
             self.propL:SetSpinAngle( math.random( 0, 180 ) )
             self.propL.maxSpinSpeed = 2500
-            self:SetRotorL( self.propL )
         end
 
         self:UpdateRotorPositions( self:GetVerticalFlight() )
