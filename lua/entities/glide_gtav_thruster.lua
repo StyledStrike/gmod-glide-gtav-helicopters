@@ -26,6 +26,7 @@ if CLIENT then
     ENT.CameraOffset = Vector( -180, 0, 50 )
 
     ENT.StartSound = "gtav/thruster/start.wav"
+    ENT.RotorBeatInterval = -1
 
     ENT.ExhaustPositions = {
         Vector( 0, 19, 5 ),
