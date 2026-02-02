@@ -151,7 +151,7 @@ if SERVER then
 
     function ENT:OnSeatInput( seatIndex, action, pressed )
         if action ~= "attack" or seatIndex > 1 or not self.HasMagnet then
-            BaseClass.OnSeatInput( seatIndex, action, pressed )
+            BaseClass.OnSeatInput( self, seatIndex, action, pressed )
             return
         end
 
