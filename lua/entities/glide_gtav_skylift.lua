@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "base_glide_heli"
 ENT.PrintName = "Skylift"
+ENT.ChassisModel = "models/gta5/vehicles/skylift/skylift_body.mdl"
 
 ENT.MaxChassisHealth = 1500
 ENT.MainRotorOffset = Vector( -128, 0, 180 )
@@ -50,7 +51,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 30000
-    ENT.ChassisModel = "models/gta5/vehicles/skylift/skylift_body.mdl"
 
     ENT.SpawnPositionOffset = Vector( 0, 0, 130 )
 

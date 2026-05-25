@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "base_glide_heli"
 ENT.PrintName = "Valkyrie"
+ENT.ChassisModel = "models/gta5/vehicles/valkyrie/valkyrie_body.mdl"
 
 ENT.MainRotorOffset = Vector( 5, 0, 110 )
 ENT.TailRotorOffset = Vector( -374, 0, 17 )
@@ -77,7 +78,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 800
-    ENT.ChassisModel = "models/gta5/vehicles/valkyrie/valkyrie_body.mdl"
 
     ENT.MainRotorRadius = 325
     ENT.TailRotorRadius = 20

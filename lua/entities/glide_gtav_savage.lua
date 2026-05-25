@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "glide_gtav_armed_heli"
 ENT.PrintName = "Savage"
+ENT.ChassisModel = "models/gta5/vehicles/savage/savage_body.mdl"
 
 ENT.MaxChassisHealth = 1500
 ENT.MainRotorOffset = Vector( 0, 0, 120 )
@@ -64,7 +65,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 700
-    ENT.ChassisModel = "models/gta5/vehicles/savage/savage_body.mdl"
     ENT.HasLandingGear = true
 
     ENT.MainRotorRadius = 340

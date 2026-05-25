@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "base_glide_heli"
 ENT.PrintName = "Maverick (Police)"
+ENT.ChassisModel = "models/gta5/vehicles/polmav/polmav_body.mdl"
 
 ENT.MainRotorOffset = Vector( 0, 0, 65 )
 ENT.TailRotorOffset = Vector( -249, 12, 21 )
@@ -34,7 +35,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 500
-    ENT.ChassisModel = "models/gta5/vehicles/polmav/polmav_body.mdl"
 
     ENT.MainRotorRadius = 200
     ENT.TailRotorRadius = 40

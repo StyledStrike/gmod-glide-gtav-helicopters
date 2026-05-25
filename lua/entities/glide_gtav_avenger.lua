@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "base_glide_plane_vtol"
 ENT.PrintName = "Avenger"
+ENT.ChassisModel = "models/gta5/vehicles/avenger/chassis.mdl"
 
 ENT.MaxChassisHealth = 1500
 ENT.VTOLTransitionTime = 3.5
@@ -131,7 +132,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 10000
-    ENT.ChassisModel = "models/gta5/vehicles/avenger/chassis.mdl"
     ENT.SpawnPositionOffset = Vector( 0, 0, 80 )
     ENT.HasLandingGear = true
 

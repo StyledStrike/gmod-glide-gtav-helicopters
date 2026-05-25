@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "glide_gtav_armed_heli"
 ENT.PrintName = "Buzzard (Weaponized)"
+ENT.ChassisModel = "models/gta5/vehicles/buzzard/buzzard_body.mdl"
 
 ENT.MainRotorOffset = Vector( 0, 0, 92 )
 ENT.TailRotorOffset = Vector( -232, 5, 65 )
@@ -77,7 +78,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 500
-    ENT.ChassisModel = "models/gta5/vehicles/buzzard/buzzard_body.mdl"
 
     ENT.MainRotorRadius = 183
     ENT.TailRotorRadius = 37

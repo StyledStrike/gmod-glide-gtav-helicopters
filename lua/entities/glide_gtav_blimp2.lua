@@ -7,10 +7,10 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "glide_gtav_blimp"
 ENT.PrintName = "Blimp (Xero)"
+ENT.ChassisModel = "models/gta5/vehicles/blimp/blimp_body.mdl"
 
 if SERVER then
     ENT.ChassisMass = 3500
-    ENT.ChassisModel = "models/gta5/vehicles/blimp/blimp_body.mdl"
 
     ENT.ExplosionEffectFlags = 1
 
