@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "glide_gtav_armed_heli"
 ENT.PrintName = "Hunter"
+ENT.ChassisModel = "models/gta5/vehicles/hunter/hunter_body.mdl"
 
 ENT.MainRotorOffset = Vector( 3, 0, 95 )
 ENT.TailRotorOffset = Vector( -363, 3, -13 )
@@ -94,7 +95,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 600
-    ENT.ChassisModel = "models/gta5/vehicles/hunter/hunter_body.mdl"
 
     ENT.MainRotorRadius = 325
     ENT.TailRotorRadius = 35

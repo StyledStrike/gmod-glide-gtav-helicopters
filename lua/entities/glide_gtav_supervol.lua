@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "base_glide_heli"
 ENT.PrintName = "Super Volito"
+ENT.ChassisModel = "models/gta5/vehicles/supervol/supervol_body.mdl"
 
 ENT.MainRotorOffset = Vector( -31, 0, 65 )
 ENT.TailRotorOffset = Vector( -287, 6, 49 )
@@ -34,7 +35,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 600
-    ENT.ChassisModel = "models/gta5/vehicles/supervol/supervol_body.mdl"
 
     ENT.MainRotorRadius = 205
     ENT.TailRotorRadius = 40

@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "glide_gtav_armed_heli"
 ENT.PrintName = "Akula"
+ENT.ChassisModel = "models/gta5/vehicles/akula/akula_body.mdl"
 
 ENT.MainRotorOffset = Vector( 22, 0, 120 )
 ENT.TailRotorOffset = Vector( -320, 0, 30 )
@@ -59,7 +60,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 600
-    ENT.ChassisModel = "models/gta5/vehicles/akula/akula_body.mdl"
     ENT.HasLandingGear = true
 
     ENT.MainRotorRadius = 295

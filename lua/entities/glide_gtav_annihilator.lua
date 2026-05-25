@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "glide_gtav_armed_heli"
 ENT.PrintName = "Annihilator"
+ENT.ChassisModel = "models/gta5/vehicles/annihilator/annihilator_body.mdl"
 
 ENT.MainRotorOffset = Vector( 0, 0, 110 )
 ENT.TailRotorOffset = Vector( -397, 15, 115 )
@@ -39,7 +40,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 800
-    ENT.ChassisModel = "models/gta5/vehicles/annihilator/annihilator_body.mdl"
 
     ENT.MainRotorRadius = 320
     ENT.TailRotorRadius = 64

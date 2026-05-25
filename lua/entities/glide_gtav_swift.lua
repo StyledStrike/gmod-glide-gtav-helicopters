@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "base_glide_heli"
 ENT.PrintName = "Swift"
+ENT.ChassisModel = "models/gta5/vehicles/swift/swift_body.mdl"
 
 ENT.MainRotorOffset = Vector( 13, 0, 100 )
 ENT.TailRotorOffset = Vector( -336, 14, 61 )
@@ -38,7 +39,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 700
-    ENT.ChassisModel = "models/gta5/vehicles/swift/swift_body.mdl"
 
     ENT.HasLandingGear = true
     ENT.MainRotorRadius = 252

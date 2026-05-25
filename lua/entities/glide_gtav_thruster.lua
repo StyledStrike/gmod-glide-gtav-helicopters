@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "base_glide_heli"
 ENT.PrintName = "Thruster"
+ENT.ChassisModel = "models/gta5/vehicles/thruster/thruster_body.mdl"
 
 ENT.MaxChassisHealth = 900
 
@@ -150,7 +151,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 200
-    ENT.ChassisModel = "models/gta5/vehicles/thruster/thruster_body.mdl"
 
     ENT.IsHeavyVehicle = false
     ENT.MainRotorRadius = 20

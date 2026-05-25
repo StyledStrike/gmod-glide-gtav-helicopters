@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "base_glide_heli"
 ENT.PrintName = "Frogger"
+ENT.ChassisModel = "models/gta5/vehicles/frogger/frogger_body.mdl"
 
 ENT.MainRotorOffset = Vector( -5, 0, 92 )
 ENT.TailRotorOffset = Vector( -237, 0, 48.5 )
@@ -32,7 +33,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 700
-    ENT.ChassisModel = "models/gta5/vehicles/frogger/frogger_body.mdl"
 
     ENT.MainRotorRadius = 205
 

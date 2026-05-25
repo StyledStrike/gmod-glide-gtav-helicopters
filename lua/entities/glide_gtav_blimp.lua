@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "base_glide_heli"
 ENT.PrintName = "Blimp (Atomic)"
+ENT.ChassisModel = "models/gta5/vehicles/blimp/blimp_body.mdl"
 
 ENT.MainRotorOffset = Vector( -65, 74, -84 )
 ENT.TailRotorOffset = Vector( -65, -74, -84 )
@@ -58,7 +59,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 3500
-    ENT.ChassisModel = "models/gta5/vehicles/blimp/blimp_body.mdl"
 
     ENT.MainRotorRadius = 30
     ENT.TailRotorRadius = ENT.MainRotorRadius

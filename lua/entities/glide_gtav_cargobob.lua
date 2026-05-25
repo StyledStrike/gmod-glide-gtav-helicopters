@@ -7,6 +7,7 @@ ENT.GlideCategory = "GTAV_Helicopters"
 ENT.Type = "anim"
 ENT.Base = "base_glide_heli"
 ENT.PrintName = "Cargobob"
+ENT.ChassisModel = "models/gta5/vehicles/cargobob/cargobob_body.mdl"
 
 ENT.MainRotorOffset = Vector( 175, 0, 120 )
 ENT.TailRotorOffset = Vector( -215, 0, 140 )
@@ -54,7 +55,6 @@ end
 
 if SERVER then
     ENT.ChassisMass = 30000
-    ENT.ChassisModel = "models/gta5/vehicles/cargobob/cargobob_body.mdl"
     ENT.SpawnPositionOffset = Vector( 0, 0, 80 )
 
     ENT.MainRotorRadius = 190
